@@ -2,14 +2,15 @@ import Home from './pages/Home'
 import { Rooms } from './pages/Rooms'
 import { Singlerooms } from './pages/Singleroom'
 import { Error } from './pages/Error'
+import Navbar from './components/Navbar'
 import './App.css'
 
 import {Route,Routes} from "react-router-dom"
 function App() {
 
   return (
-    <>
-      <h1>Hello</h1>
+    <div>
+      <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Rooms' element={<Rooms/>}></Route>
@@ -17,7 +18,7 @@ function App() {
         <Route path='*' element={<Error/>}></Route>
       </Routes>
 
-    </>
+    </div>
   )
 }
 
